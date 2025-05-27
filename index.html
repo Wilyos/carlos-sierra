@@ -192,18 +192,18 @@
     <section class="contact" id="contacto">
       <h2 class="heading">¿Estas <span>Interesado?</span></h2>
         <p style="font-size:large; text-align: center;" >Déjanos tus datos y recibe asesoría personalizada</p>
-      <form action="" method="POST">
+      <form id="contactForm">
         <div class="input-group">
           <div class="input-box">
-            <input type="text" placeholder="Nombre" required />
-            <input type="email" placeholder="Email" required />
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="email" name="email" placeholder="Email" required />
           </div>
-         <div class="input-box">
-            <input type="text" placeholder="Telefono" required />
+          <div class="input-box">
+            <input type="text" name="telefono" placeholder="Telefono" required />
           </div>
         </div>
         <div class="input-group-2">
-          <textarea name="" id="" placeholder="¿Qué producto te interesa conocer?" cols="30" rows="10"></textarea>
+          <textarea name="mensaje" placeholder="¿Qué producto te interesa conocer?" cols="30" rows="10" required></textarea>
           <input type="submit" value="Enviar" class="btn" />
         </div>
       </form>

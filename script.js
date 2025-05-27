@@ -39,3 +39,20 @@ END:VCARD
 
   const downloadLink = document.getElementById('downloadContact');
   downloadLink.href = url;
+
+ // formulario
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(this));
+  const res = await fetch('https://sierra-seguros-back.onrender.com/send', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+  if (res.ok) {
+    alert('Mensaje enviado correctamente');
+    this.reset();
+  } else {
+    alert('Error enviando mensaje');
+  }
+});
